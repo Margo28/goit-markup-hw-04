@@ -142,6 +142,7 @@ h1{
 .contact-list{
     display: flex;
     margin-left: auto ;
+    align-items: center;
 }
 
 .contact-list .item + .item{
@@ -157,10 +158,10 @@ h1{
     
 }
 .address-link{
-    display: block;
+    display:flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
-
     font-weight: 500;
     font-size: 14px;
     line-height: 1.142;
@@ -168,11 +169,40 @@ h1{
     color: var(--main-text-color);
     text-decoration: none; 
 }
+
+
+
 .address-link:hover,
 .address-link:focus{
     color: var(--accent-color)
 }
 
+.address-link:hover .envelope-icon,
+.address-link:focus .envelope-icon{
+    fill: var(--accent-color);
+}
+
+.address-link:hover .smartphone-icon,
+.address-link:focus .smartphone-icon{
+    fill: var(--accent-color);
+}
+
+
+
+
+.envelope-icon{
+    margin-right: 10px;
+    width: 16px;
+    height: 12px;
+    fill: var(--main-text-color);
+}
+
+.smartphone-icon{
+    margin-right: 10px;
+    width: 10px;
+    height: 16px;
+    fill: var(--main-text-color);
+}
 
 .hero{
     text-align: center;
@@ -185,7 +215,7 @@ h1{
     margin-right: auto;
     background-color: #C4C4C4; 
     
-    background-image:url(../images/baner.jpg);
+    background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)) ,url(../images/baner.jpg);
     
 }
 
@@ -382,11 +412,28 @@ h1{
     margin-right: 10px;
 }
 
-.list-social .icon{
-    display: inline-block;
-     width: 44px;
+.list-social .icon-link{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
     height: 44px; 
+    border-radius: 50%;
+         
+}
+
+.social-icon{
+    fill: #AFB1B8;
+}
+
+.item-icons .icon-link:hover,
+.item-icons .icon-link:focus{
     background-color: var(--accent-color);
+}
+
+.item-icons:hover .social-icon,
+.item-icons:focus .social-icon{
+    fill: var(--title-text-color);   
 }
 
 
@@ -404,12 +451,30 @@ h1{
 }
 
 .client-list .item{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 170px;
     height: 90px;
     margin-right: 30px;
-    padding: 20px 63px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+}
+
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon{
+    fill: var(--accent-color);
+}
+
+.client-list .client-link:hover{
+    border: 1px solid var(--accent-color) ;
+}
+
+
+
+.client-icon{
+    fill: #AFB1B8;
 }
 
 .client-list .item:last-child{
@@ -465,9 +530,34 @@ h1{
     padding-left: 0px;
 }
 
-.list-social .item-icons{
+.list-social .item-icons2{
+    margin-right: 10px;
     padding-bottom: 0px;
 }
+.list-social .item-icons2:last-child{
+    margin-right: 0px;
+}
+
+.list-social .icon-link2{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px; 
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+         
+}
+
+.social-icon2{
+    fill: var(--title-text-color);
+}
+
+.item-icons2 .icon-link2:hover,
+.item-icons2 .icon-link2:focus{
+    background-color: var(--accent-color);
+}
+
 
 .join{
     margin-top: 0px;
@@ -533,6 +623,7 @@ h1{
 .filter:focus{
    color: var(--title-text-color);
    background-color: var(--accent-color);
+   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }  
 
 .prtfl-list{
