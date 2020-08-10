@@ -426,15 +426,16 @@ h1{
     fill: #AFB1B8;
 }
 
-.item-icons .icon-link:hover,
-.item-icons .icon-link:focus{
+ .icon-link:hover,
+ .icon-link:focus{
     background-color: var(--accent-color);
 }
 
-.item-icons:hover .social-icon,
-.item-icons:focus .social-icon{
-    fill: var(--title-text-color);   
+.icon-link:hover .social-icon,
+.icon-link:focus .social-icon{
+    fill: var(--title-text-color);
 }
+
 
 
 .list-social .item:last-child{
@@ -450,7 +451,7 @@ h1{
     display: flex;
 }
 
-.client-list .item{
+.client-list .client-item{
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -462,14 +463,18 @@ h1{
 }
 
 
-.client-link:hover .client-icon,
-.client-link:focus .client-icon{
+.client-item:hover,
+.client-item:focus{
+    border: 1px solid var(--accent-color);
+}
+
+
+.client-item:hover .client-icon,
+.client-item:focus .client-icon{
     fill: var(--accent-color);
 }
 
-.client-list .client-link:hover{
-    border: 1px solid var(--accent-color) ;
-}
+
 
 
 
