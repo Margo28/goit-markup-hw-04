@@ -643,7 +643,7 @@ h1{
     margin-right: 30px;
     margin-bottom: 30px;
     border: 1px solid #EEEEEE;
-    /* overflow: hidden;  */
+    
 }
 
 .prtfl-photo{
@@ -672,6 +672,7 @@ h1{
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--secondary-title-color);
+    
 }
 
 .portfolio-description{
@@ -682,6 +683,9 @@ h1{
     line-height: 1.875;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
+   
 }
 
-
+.portfolio-link{
+    text-decoration: none;
+}
